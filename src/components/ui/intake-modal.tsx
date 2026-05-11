@@ -6,7 +6,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, ArrowLeft, Check, Clock, Video } from "lucide-react";
 
 const CALENDLY_URL = "https://calendly.com/dannymarkland/1-1-w-danny";
-const INTAKE_EMAIL = "support@vaelor.io";
+// Paste your Formspree endpoint here once you have it:
+// 1. Go to formspree.io → sign up → New Form → name it "Vaelor Intake"
+// 2. Copy the endpoint (looks like https://formspree.io/f/abcd1234)
+// 3. Replace the string below
+const FORMSPREE_ENDPOINT = "PASTE_YOUR_FORMSPREE_ENDPOINT_HERE";
 
 // ─── Option sets ──────────────────────────────────────────────────────────────
 
@@ -218,42 +222,33 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
 
   const handleSubmit = async () => {
     setSubmitting(true);
-
-    const body = [
-      `MODERNIZATION STRATEGY CALL — INTAKE`,
-      ``,
-      `COMPANY INFORMATION`,
-      `Company: ${form.companyName}`,
-      `Website: ${form.website || "Not provided"}`,
-      `Contact: ${form.contactName}`,
-      `Role: ${form.role}`,
-      `Size: ${form.companySize || "Not specified"}`,
-      ``,
-      `CURRENT CHALLENGES`,
-      `Prompted by: ${form.challenges.join(", ")}`,
-      `Fails to communicate: ${form.failsCommunicate || "Not specified"}`,
-      ``,
-      `BUSINESS PRIORITIES`,
-      `Goals: ${form.goals.join(", ")}`,
-      `Organization type: ${form.orgType}`,
-      ``,
-      `ENGAGEMENT SCOPE`,
-      `Areas of focus: ${form.scopeAreas.join(", ")}`,
-      ``,
-      `STRATEGIC DIRECTION`,
-      `Desired perception: ${form.desiredPerception}`,
-      `Admired sites: ${form.admiredSites || "Not specified"}`,
-      `Additional notes: ${form.additionalNotes || "None"}`,
-    ].join("\n");
-
-    const subject = `Modernization Strategy Call — ${form.companyName}`;
-    window.location.href = `mailto:${INTAKE_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    setTimeout(() => {
-      window.open(CALENDLY_URL, "_blank");
-      setSubmitted(true);
-      setSubmitting(false);
-    }, 600);
+    try {
+      await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: `Modernization Strategy Call — ${form.companyName}`,
+          company_name: form.companyName,
+          website: form.website || "Not provided",
+          contact_name: form.contactName,
+          role: form.role,
+          company_size: form.companySize || "Not specified",
+          challenges: form.challenges.join(", "),
+          fails_to_communicate: form.failsCommunicate || "Not specified",
+          goals: form.goals.join(", "),
+          org_type: form.orgType,
+          scope_areas: form.scopeAreas.join(", "),
+          desired_perception: form.desiredPerception,
+          admired_sites: form.admiredSites || "Not specified",
+          additional_notes: form.additionalNotes || "None",
+        }),
+      });
+    } catch (_) {
+      // fail silently — Calendly still opens regardless
+    }
+    setSubmitted(true);
+    setSubmitting(false);
+    window.open(CALENDLY_URL, "_blank");
   };
 
   const slideVariants = {
