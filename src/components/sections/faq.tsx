@@ -73,7 +73,7 @@ export default function FAQ() {
               initial={{ opacity: 0, y: 16 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1.0, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-4 text-sm font-light text-[#e0e0e0] leading-relaxed"
+              className="mt-4 text-sm font-light text-[#999] leading-relaxed"
             >
               If something isn&apos;t answered here, the discovery call will cover it.
             </motion.p>

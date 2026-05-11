@@ -97,13 +97,13 @@ export default function Clients() {
               transition={{ duration: 1.0, delay: 0.25 + i * 0.05, ease: [0.16, 1, 0.3, 1] }}
               className="bg-black px-5 py-6 group hover:bg-[#05080d] transition-colors duration-500"
             >
-              <span className="text-[9px] font-mono text-[#222] tracking-[0.22em] group-hover:text-[#1e5280] transition-colors duration-500">
+              <span className="text-[9px] font-mono text-[#555] tracking-[0.22em] group-hover:text-[#1e5280] transition-colors duration-500">
                 {s.code}
               </span>
               <h3 className="mt-3 text-sm font-light text-[#bbb] leading-snug group-hover:text-white transition-colors duration-300">
                 {s.label}
               </h3>
-              <p className="mt-1.5 text-[10px] text-[#3a3a3a] font-mono leading-relaxed tracking-wide group-hover:text-[#555] transition-colors duration-300">
+              <p className="mt-1.5 text-[10px] text-[#777] font-mono leading-relaxed tracking-wide group-hover:text-[#555] transition-colors duration-300">
                 {s.sub}
               </p>
             </motion.div>

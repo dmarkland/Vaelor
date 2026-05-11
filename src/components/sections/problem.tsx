@@ -65,7 +65,7 @@ export default function Problem() {
             initial={{ opacity: 0, y: 16 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.0, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-4 text-sm md:text-base font-light leading-relaxed text-[#666]"
+            className="mt-4 text-sm md:text-base font-light leading-relaxed text-[#888]"
           >
             In federal procurement, that disconnect costs you more than first impressions.
             It costs you credibility at the stage when credibility matters most.
@@ -82,14 +82,14 @@ export default function Problem() {
               transition={{ duration: 1.0, delay: 0.35 + i * 0.12, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="flex gap-8 md:gap-14 border-t border-[#111] py-9">
-                <span className="text-[10px] font-mono text-[#2a2a2a] tracking-[0.25em] mt-1 shrink-0 w-6 text-right">
+                <span className="text-[10px] font-mono text-[#555] tracking-[0.25em] mt-1 shrink-0 w-6 text-right">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="flex flex-col md:flex-row md:items-start md:gap-14 flex-1">
                   <h3 className="text-base md:text-[17px] font-light text-[#d8d8d8] leading-snug md:w-72 shrink-0">
                     {point.title}
                   </h3>
-                  <p className="mt-3 md:mt-0 text-sm font-light text-[#666] leading-relaxed">
+                  <p className="mt-3 md:mt-0 text-sm font-light text-[#888] leading-relaxed">
                     {point.body}
                   </p>
                 </div>

@@ -41,7 +41,7 @@ export const Timeline = ({ events }: TimelineProps) => {
                 "hover:shadow-[0_0_50px_rgba(30,82,128,0.12),0_0_100px_rgba(30,82,128,0.07),inset_0_0_50px_rgba(30,82,128,0.06)]"
               )}
             >
-              <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#444]">
+              <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#666]">
                 {event.period}
               </span>
               <h3
@@ -51,7 +51,7 @@ export const Timeline = ({ events }: TimelineProps) => {
                 {event.title}
               </h3>
               <p
-                className="mt-2 text-sm font-light text-[#bbb] leading-relaxed group-hover:text-white transition-all duration-300"
+                className="mt-2 text-sm font-light text-[#ccc] leading-relaxed group-hover:text-white transition-all duration-300"
                 style={{ textShadow: "0 0 12px rgba(255,255,255,0.15)" }}
               >
                 {event.description}

@@ -31,11 +31,11 @@ export default function Metrics() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[#0f0f0f]">
           {METRICS.map((m) => (
-            <div key={m.label} className="px-6 py-8 first:pl-0 last:pr-0">
-              <p className="text-xl md:text-2xl font-extralight text-white tracking-tight tabular-nums">
+            <div key={m.label} className="px-6 py-10 first:pl-0 last:pr-0">
+              <p className="text-2xl md:text-3xl font-extralight text-white tracking-tight tabular-nums">
                 {m.value}
               </p>
-              <p className="mt-1.5 text-[10px] font-mono text-[#3a3a3a] tracking-[0.14em] uppercase leading-relaxed">
+              <p className="mt-2 text-[10px] font-mono text-[#777] tracking-[0.14em] uppercase leading-relaxed">
                 {m.label}
               </p>
             </div>
