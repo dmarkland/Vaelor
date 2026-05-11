@@ -91,7 +91,7 @@ export default function Capabilities() {
         >
           <div className="h-px w-6 bg-[#2a2a2a]" />
           <span className="text-[10px] tracking-[0.22em] text-[#555] uppercase font-mono">
-            What We Build
+            Engagement Scope
           </span>
         </motion.div>
 
@@ -110,7 +110,7 @@ export default function Capabilities() {
           transition={{ duration: 1.0, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="mt-4 text-sm font-light text-[#999] max-w-xl leading-relaxed"
         >
-          Click any node to explore. Every capability is built around the government procurement cycle — not the commercial web.
+          Every capability is architected around how government buyers evaluate, qualify, and select contractors — not how commercial websites are built.
         </motion.p>
       </div>
 

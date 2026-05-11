@@ -3,19 +3,19 @@
 const METRICS = [
   {
     value: "$850B+",
-    label: "Annual federal contracting market",
+    label: "Annual federal contracting market — the only sector we serve",
   },
   {
     value: "14 Days",
-    label: "Strategic intake to live site",
+    label: "Strategic intake to production-ready live site",
   },
   {
-    value: "8(a) · SDVOSB · HUBZone",
-    label: "Set-aside programs supported",
+    value: "Section 508",
+    label: "Federal accessibility compliance — built in by default, never retrofitted",
   },
   {
     value: "100%",
-    label: "Defense & government sector — no exceptions",
+    label: "Government sector engagements — zero commercial exceptions",
   },
 ];
 

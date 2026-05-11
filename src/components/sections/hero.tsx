@@ -64,8 +64,8 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="mt-10 max-w-sm text-sm md:text-[15px] font-light leading-[1.7] text-[#888] animate-fade-in-up animation-delay-600">
-          You win government contracts. You hold clearances. You operate at the highest
-          levels of federal procurement. Your digital presence should reflect that standard.
+          You win contracts. You hold clearances. You operate at the highest levels of federal
+          procurement. Your digital presence should be held to the same standard.
         </p>
 
         {/* CTA */}
@@ -86,11 +86,11 @@ export default function Hero() {
               (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 0 0 1px rgba(42,114,181,0.3)";
             }}
           >
-            See What&apos;s Possible
+            Request a Digital Assessment
           </Link>
 
           <p className="text-[10px] tracking-[0.15em] uppercase text-[#555] font-mono">
-            Trusted by defense contractors &amp; DoD-aligned firms
+            Exclusively serving defense contractors &amp; DoD-aligned firms
           </p>
 
           {/* Industry tags — readable signal */}

@@ -48,7 +48,7 @@ export default function CTA() {
             transition={{ duration: 1.1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="mt-6 text-sm md:text-base font-light text-[#888] max-w-md leading-relaxed"
           >
-            Schedule a discovery call. We&apos;ll audit your digital presence against the firms you&apos;re competing with — and give you a clear picture of what it would take to close the gap.
+            Schedule a discovery call. We&apos;ll audit your digital presence against the firms competing for the same contracts — and give you a precise picture of what closing that gap requires.
           </motion.p>
 
           <motion.div
@@ -57,25 +57,26 @@ export default function CTA() {
             transition={{ duration: 1.0, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="mt-10 flex items-center gap-8"
           >
-            <button
-              className="inline-flex items-center gap-2 text-white text-[11px] font-mono tracking-[0.16em] uppercase px-8 py-4 transition-all duration-300"
+            <a
+              href="mailto:support@vaelor.com?subject=Discovery%20Call%20Request&body=Hello%2C%0A%0AI%27d%20like%20to%20schedule%20a%20discovery%20call%20to%20discuss%20our%20digital%20presence.%0A%0ACompany%3A%20%0ANAICS%20Code(s)%3A%20%0APrimary%20goal%3A%20"
+              className="inline-flex items-center gap-2 text-white text-[11px] font-mono tracking-[0.16em] uppercase px-8 py-4 transition-all duration-300 cursor-pointer"
               style={{
                 background: "var(--accent-blue)",
                 boxShadow: "0 0 0 1px rgba(42,114,181,0.3)",
               }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLButtonElement).style.background = "var(--accent-blue-bright)";
-                (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 0 30px var(--accent-blue-glow), 0 0 60px rgba(30,82,128,0.2)";
+                (e.currentTarget as HTMLAnchorElement).style.background = "var(--accent-blue-bright)";
+                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 0 30px var(--accent-blue-glow), 0 0 60px rgba(30,82,128,0.2)";
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLButtonElement).style.background = "var(--accent-blue)";
-                (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 0 0 1px rgba(42,114,181,0.3)";
+                (e.currentTarget as HTMLAnchorElement).style.background = "var(--accent-blue)";
+                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 0 0 1px rgba(42,114,181,0.3)";
               }}
             >
               Schedule a Discovery Call
               <ArrowRight className="h-4 w-4" />
-            </button>
-            <span className="text-xs text-[#333] font-mono tracking-wider hidden sm:block">
+            </a>
+            <span className="text-xs text-[#444] font-mono tracking-wider hidden sm:block">
               No commitment. 30 minutes.
             </span>
           </motion.div>

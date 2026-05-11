@@ -69,13 +69,13 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:block">
-          <Link
-            href="#contact"
-            className="text-[11px] tracking-[0.14em] uppercase font-mono px-5 py-2.5 text-white/80 hover:text-white transition-all duration-200"
+          <a
+            href="mailto:support@vaelor.com?subject=Discovery%20Call%20Request&body=Hello%2C%0A%0AI%27d%20like%20to%20schedule%20a%20discovery%20call%20to%20discuss%20our%20digital%20presence.%0A%0ACompany%3A%20%0ANAICS%20Code(s)%3A%20%0APrimary%20goal%3A%20"
+            className="text-[11px] tracking-[0.14em] uppercase font-mono px-5 py-2.5 text-white/80 hover:text-white transition-all duration-200 cursor-pointer"
             style={{ border: "1px solid var(--accent-blue)", boxShadow: "0 0 12px var(--accent-blue-subtle)" }}
           >
             Book a Call
-          </Link>
+          </a>
         </div>
 
         {/* Mobile hamburger */}
@@ -103,13 +103,13 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="#contact"
+          <a
+            href="mailto:support@vaelor.com?subject=Discovery%20Call%20Request&body=Hello%2C%0A%0AI%27d%20like%20to%20schedule%20a%20discovery%20call%20to%20discuss%20our%20digital%20presence.%0A%0ACompany%3A%20%0ANAICS%20Code(s)%3A%20%0APrimary%20goal%3A%20"
             onClick={() => setMenuOpen(false)}
-            className="mt-2 text-sm tracking-[0.14em] uppercase font-mono px-5 py-3 border border-white/20 text-white text-center hover:border-white/50 transition-all duration-200"
+            className="mt-2 text-sm tracking-[0.14em] uppercase font-mono px-5 py-3 border border-white/20 text-white text-center hover:border-white/50 transition-all duration-200 cursor-pointer"
           >
             Book a Call
-          </Link>
+          </a>
         </div>
       )}
     </header>

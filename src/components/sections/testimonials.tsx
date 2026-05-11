@@ -32,16 +32,16 @@ export default function Testimonials() {
             transition={{ duration: 1.1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="text-3xl md:text-4xl lg:text-5xl font-extralight text-[#e8e8e8] tracking-[-0.02em] leading-tight max-w-2xl"
           >
-            What Happens After Launch
+            Impact Across the Defense Industrial Base
           </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.0, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-4 text-sm font-light text-[#e0e0e0] max-w-xl leading-relaxed"
+            className="mt-4 text-sm font-light text-[#888] max-w-xl leading-relaxed"
           >
-            From defense primes to 8(a) firms — the pattern is consistent.
+            From defense primes to 8(a) firms pursuing set-aside vehicles — the pattern is consistent.
           </motion.p>
         </div>
 

@@ -39,7 +39,7 @@ export default function Footer() {
 
         {/* Tagline */}
         <p className="text-sm font-light text-[#666] tracking-wide text-center max-w-sm leading-relaxed">
-          Precision-built websites for defense contractors.
+          Strategic digital modernization for the defense industrial base.
         </p>
 
         {/* Nav links */}
@@ -60,12 +60,15 @@ export default function Footer() {
 
         {/* Legal */}
         <div className="flex flex-col sm:flex-row items-center justify-between w-full gap-3">
-          <p className="text-xs text-[#333] font-mono">
-            © 2025 Vaelor. All rights reserved.
+          <p className="text-xs text-[#444] font-mono">
+            © 2026 Vaelor. All rights reserved.
           </p>
-          <p className="text-xs text-[#333] font-mono">
+          <a
+            href="mailto:support@vaelor.com"
+            className="text-xs text-[#444] font-mono hover:text-[#888] transition-colors duration-200"
+          >
             support@vaelor.com
-          </p>
+          </a>
         </div>
 
       </div>

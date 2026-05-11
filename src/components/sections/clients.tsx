@@ -81,9 +81,9 @@ export default function Clients() {
             initial={{ opacity: 0, y: 16 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.0, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-4 text-sm font-light text-[#666] leading-relaxed"
+            className="mt-4 text-sm font-light text-[#888] leading-relaxed"
           >
-            We don&apos;t work with retail brands, SaaS startups, or e-commerce companies. Every engagement, every capability, every line of copy is built for one sector — the one you operate in.
+            We don&apos;t work with retail brands, SaaS startups, or commercial agencies. Every engagement, every capability, every line of copy is engineered for one sector — the one you operate in.
           </motion.p>
         </div>
 
