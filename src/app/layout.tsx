@@ -17,6 +17,10 @@ export const metadata: Metadata = {
     description: "From discovery to launch in 14 days. Built for government contractors, defense vendors, and aerospace firms.",
     type: "website",
   },
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
