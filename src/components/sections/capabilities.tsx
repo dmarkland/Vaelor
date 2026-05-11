@@ -30,9 +30,9 @@ const CAPABILITIES = [
   },
   {
     id: 3,
-    title: "508 & Compliance",
+    title: "Accessibility & Federal Standards",
     date: "Architecture",
-    content: "Section 508 accessibility conformance, WCAG 2.1 standards, and federal web best practices built in by default — so your site meets the baseline before any government review.",
+    content: "Accessibility-conscious development aligned with modern WCAG best practices and federal web standards to support usability, readability, and compliance readiness.",
     category: "Architecture",
     icon: Shield,
     relatedIds: [2, 4],
