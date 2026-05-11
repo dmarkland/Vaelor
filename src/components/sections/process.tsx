@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Timeline } from "@/components/ui/timeline-component";
+import { TacticalGrid } from "@/components/ui/tactical-grid";
 
 const PROCESS_STEPS = [
   {
@@ -43,6 +44,7 @@ export default function Process() {
 
   return (
     <section ref={ref} id="process" className="relative bg-black border-t border-[#0f0f0f] overflow-hidden">
+      <TacticalGrid />
       <div className="relative z-10 mx-auto max-w-5xl px-6 pt-24 pb-4">
         <motion.div
           initial={{ opacity: 0, y: 12 }}

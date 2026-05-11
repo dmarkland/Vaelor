@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { FallingPattern } from "@/components/ui/falling-pattern";
+import { ScanLine } from "@/components/ui/scan-line";
 
 export default function CTA() {
   const ref = useRef(null);
@@ -12,6 +13,7 @@ export default function CTA() {
   return (
     <section ref={ref} id="contact" className="relative bg-black border-t border-[#0f0f0f] overflow-hidden py-32 md:py-48">
       <FallingPattern className="absolute inset-0 z-0" />
+      <ScanLine className="z-[1]" />
 
       <div
         className="absolute inset-0 z-0 pointer-events-none"

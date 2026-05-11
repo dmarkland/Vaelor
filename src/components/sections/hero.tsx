@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { WebGLShader } from "@/components/ui/web-gl-shader";
 import { AnimatedText } from "@/components/ui/animated-shiny-text";
+import { RadarBackground } from "@/components/ui/radar-bg";
+import { CoordinateHUD } from "@/components/ui/coordinate-hud";
+import { ScanLine } from "@/components/ui/scan-line";
 
 const INDUSTRY_TAGS = [
   "SAM.gov", "GSA Schedule", "IDIQ / GWAC", "CMMC", "Section 508", "8(a)", "SDVOSB",
@@ -12,16 +15,25 @@ export default function Hero() {
   return (
     <section className="relative w-full h-screen overflow-hidden bg-black">
 
+      {/* Radar / tactical grid layer */}
+      <RadarBackground className="z-[1] opacity-90" />
+
       {/* WebGL background */}
-      <div className="absolute inset-0 opacity-35">
+      <div className="absolute inset-0 z-[2] opacity-30">
         <WebGLShader />
       </div>
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black pointer-events-none" />
+      <div className="absolute inset-0 z-[3] bg-gradient-to-b from-black/50 via-black/10 to-black pointer-events-none" />
+
+      {/* Scan line — single sweep on load */}
+      <ScanLine className="z-[4]" />
+
+      {/* Coordinate HUD */}
+      <CoordinateHUD />
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
+      <div className="relative z-[10] h-full flex flex-col items-center justify-center px-6 text-center">
 
         {/* Eyebrow */}
         <div className="animate-fade-in-down flex items-center gap-3 mb-12">

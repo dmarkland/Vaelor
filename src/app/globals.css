@@ -238,6 +238,37 @@ body {
   animation: x-slider 90s linear infinite;
 }
 
+/* ── radar sweep ── */
+@keyframes radar-sweep {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+.animate-radar-sweep {
+  animation: radar-sweep 14s linear infinite;
+}
+
+/* ── horizontal scan line ── */
+@keyframes scan-line {
+  0%   { top: -1px; opacity: 0; }
+  3%   { opacity: 1; }
+  97%  { opacity: 0.5; }
+  100% { top: 100%; opacity: 0; }
+}
+.animate-scan-line {
+  position: absolute;
+  animation: scan-line 10s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+/* ── HUD bracket draw-in ── */
+@keyframes bracket-draw {
+  from { opacity: 0; transform: scale(0.7); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.animate-bracket-draw {
+  animation: bracket-draw 0.8s ease-out forwards;
+}
+
 /* ── accessibility: respect reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   *,

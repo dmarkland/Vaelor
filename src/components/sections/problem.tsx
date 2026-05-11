@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { TacticalGrid } from "@/components/ui/tactical-grid";
 
 const PAIN_POINTS = [
   {
@@ -23,8 +24,9 @@ export default function Problem() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="relative bg-black py-24 md:py-36 border-t border-[#0f0f0f]">
-      <div className="mx-auto max-w-5xl px-6">
+    <section ref={ref} className="relative bg-black py-24 md:py-36 border-t border-[#0f0f0f] overflow-hidden">
+      <TacticalGrid />
+      <div className="relative z-10 mx-auto max-w-5xl px-6">
 
         {/* Header */}
         <div className="max-w-2xl">
