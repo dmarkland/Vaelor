@@ -278,8 +278,9 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
             </Dialog.Overlay>
 
             <Dialog.Content asChild>
+              <div className="fixed inset-0 z-[101] flex items-center justify-center p-4 outline-none">
               <motion.div
-                className="fixed z-[101] top-1/2 left-1/2 w-full max-w-lg -translate-x-1/2 -translate-y-1/2 outline-none px-4"
+                className="w-full max-w-lg"
                 initial={{ opacity: 0, y: 28, scale: 0.97 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 14, scale: 0.97 }}
@@ -556,6 +557,7 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
                   )}
                 </div>
               </motion.div>
+              </div>
             </Dialog.Content>
           </Dialog.Portal>
         )}
