@@ -2,6 +2,7 @@ import Navbar from "@/components/sections/navbar";
 import Hero from "@/components/sections/hero";
 import Metrics from "@/components/sections/metrics";
 import Problem from "@/components/sections/problem";
+import GovConFailures from "@/components/sections/govcon-failures";
 import Capabilities from "@/components/sections/capabilities";
 import Clients from "@/components/sections/clients";
 import Process from "@/components/sections/process";
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <Metrics />
       <Problem />
+      <GovConFailures />
       <Capabilities />
       <Clients />
       <Process />

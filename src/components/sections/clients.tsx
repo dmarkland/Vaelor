@@ -5,42 +5,42 @@ import { motion, useInView } from "framer-motion";
 
 const SECTORS = [
   {
-    code: "SB-01",
+    code: "PRIME",
     label: "Prime Contractors",
     sub: "Full-service defense & federal integrators",
   },
   {
-    code: "SB-02",
+    code: "8(A)",
     label: "8(a) Certified Firms",
     sub: "SBA program & set-aside pursuit",
   },
   {
-    code: "SB-03",
+    code: "SDVO",
     label: "SDVOSB / VOSB",
     sub: "Service-disabled & veteran-owned businesses",
   },
   {
-    code: "SB-04",
+    code: "HUB",
     label: "HUBZone Companies",
     sub: "Historically underutilized business zones",
   },
   {
-    code: "SB-05",
+    code: "DTECH",
     label: "Defense Technology",
     sub: "Autonomous systems, hardware & software",
   },
   {
-    code: "SB-06",
+    code: "FED-IT",
     label: "Federal IT & Cybersecurity",
     sub: "FedRAMP, CMMC, Zero Trust, RMF",
   },
   {
-    code: "SB-07",
+    code: "A&S",
     label: "Aerospace & Systems",
     sub: "Engineering, integration & platform firms",
   },
   {
-    code: "SB-08",
+    code: "IC/NS",
     label: "Intelligence & NatSec",
     sub: "Cleared programs, sensitive environment work",
   },

@@ -540,7 +540,7 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
                               ? "bg-[#1e5280] text-white cursor-pointer hover:bg-[#2a72b5]"
                               : "bg-[#0d1420] text-[#333] pointer-events-none"}`}
                         >
-                          {submitting ? "Submitting..." : "Book My Call"}
+                          {submitting ? "Submitting..." : "Request My Assessment"}
                           {!submitting && <ArrowRight className="h-3 w-3" />}
                         </button>
                       )}

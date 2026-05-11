@@ -3,7 +3,6 @@
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { TacticalGrid } from "@/components/ui/tactical-grid";
-import { TypingEffect } from "@/components/ui/typing-effect";
 
 const PAIN_POINTS = [
   {
@@ -79,18 +78,9 @@ export default function Problem() {
           <p className="text-xl md:text-2xl lg:text-3xl font-extralight text-[#d8d8d8] tracking-[-0.01em] leading-tight">
             In federal procurement, that disconnect costs you more than first impressions.
           </p>
-          <div style={{ color: "var(--accent-blue-bright)" }}>
-            <TypingEffect
-              texts={[
-                "It costs you credibility at the stage when credibility matters most.",
-                "It costs you the teaming partner who moved on after seeing your site.",
-                "It costs you the source selection score you'll never know you lost.",
-              ]}
-              rotationInterval={3200}
-              typingSpeed={28}
-              className="mt-2 text-xl md:text-2xl lg:text-3xl font-extralight tracking-[-0.01em] leading-tight justify-start text-left"
-            />
-          </div>
+          <p className="mt-2 text-xl md:text-2xl lg:text-3xl font-extralight tracking-[-0.01em] leading-tight" style={{ color: "var(--accent-blue-bright)" }}>
+            It costs you credibility at the stage when credibility matters most.
+          </p>
         </motion.div>
 
         {/* Interactive pain point selector */}

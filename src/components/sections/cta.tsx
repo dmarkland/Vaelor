@@ -49,7 +49,7 @@ export default function CTA() {
             transition={{ duration: 1.1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="mt-6 text-sm md:text-base font-light text-[#888] max-w-md leading-relaxed"
           >
-            Schedule a discovery call. We&apos;ll audit your digital presence against the firms competing for the same contracts — and give you a precise picture of what closing that gap requires.
+            We audit your digital presence against the firms competing for the same contracts — and give you a precise picture of what closing that gap requires.
           </motion.p>
 
           <motion.div
@@ -74,7 +74,7 @@ export default function CTA() {
                   (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 0 0 1px rgba(42,114,181,0.3)";
                 }}
               >
-                Schedule a Discovery Call
+                Request a Modernization Review
                 <ArrowRight className="h-4 w-4" />
               </button>
             </IntakeModal>

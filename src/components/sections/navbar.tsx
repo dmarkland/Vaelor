@@ -75,7 +75,7 @@ export default function Navbar() {
               className="text-[11px] tracking-[0.14em] uppercase font-mono px-5 py-2.5 text-white/80 hover:text-white transition-all duration-200 cursor-pointer"
               style={{ border: "1px solid var(--accent-blue)", boxShadow: "0 0 12px var(--accent-blue-subtle)" }}
             >
-              Book a Call
+              Request a Review
             </button>
           </IntakeModal>
         </div>
@@ -110,7 +110,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className="mt-2 w-full text-sm tracking-[0.14em] uppercase font-mono px-5 py-3 border border-white/20 text-white text-center hover:border-white/50 transition-all duration-200 cursor-pointer"
             >
-              Book a Call
+              Request a Review
             </button>
           </IntakeModal>
         </div>
