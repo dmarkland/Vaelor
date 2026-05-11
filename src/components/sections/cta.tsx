@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { FallingPattern } from "@/components/ui/falling-pattern";
 import { ScanLine } from "@/components/ui/scan-line";
-import { BookingModal } from "@/components/ui/booking-modal";
+import { IntakeModal } from "@/components/ui/intake-modal";
 
 export default function CTA() {
   const ref = useRef(null);
@@ -58,7 +58,7 @@ export default function CTA() {
             transition={{ duration: 1.0, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="mt-10 flex items-center gap-8"
           >
-            <BookingModal>
+            <IntakeModal>
               <button
                 className="inline-flex items-center gap-2 text-white text-[11px] font-mono tracking-[0.16em] uppercase px-8 py-4 transition-all duration-300 cursor-pointer"
                 style={{
@@ -77,7 +77,7 @@ export default function CTA() {
                 Schedule a Discovery Call
                 <ArrowRight className="h-4 w-4" />
               </button>
-            </BookingModal>
+            </IntakeModal>
             <span className="text-xs text-[#444] font-mono tracking-wider hidden sm:block">
               No commitment. 30 minutes.
             </span>
