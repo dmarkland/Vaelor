@@ -39,14 +39,14 @@ export default function Hero() {
             gradientColors="linear-gradient(90deg, #888, #e8e8e8, #888)"
             gradientAnimationDuration={9}
             className="leading-[1.06]"
-            textClassName="text-5xl md:text-6xl lg:text-[6.5rem] xl:text-[7.5rem] font-extralight tracking-[-0.04em]"
+            textClassName="text-4xl md:text-6xl lg:text-[5.5rem] font-extralight tracking-[-0.03em]"
           />
           <AnimatedText
             text="a Presence That Matches It."
             gradientColors="linear-gradient(90deg, #444, #777, #444)"
             gradientAnimationDuration={9}
             className="leading-[1.06]"
-            textClassName="text-5xl md:text-6xl lg:text-[6.5rem] xl:text-[7.5rem] font-extralight tracking-[-0.04em]"
+            textClassName="text-4xl md:text-6xl lg:text-[5.5rem] font-extralight tracking-[-0.03em]"
           />
         </div>
 
