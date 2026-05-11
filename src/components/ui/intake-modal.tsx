@@ -10,7 +10,7 @@ const CALENDLY_URL = "https://calendly.com/dannymarkland/1-1-w-danny";
 // 1. Go to formspree.io → sign up → New Form → name it "Vaelor Intake"
 // 2. Copy the endpoint (looks like https://formspree.io/f/abcd1234)
 // 3. Replace the string below
-const FORMSPREE_ENDPOINT = "PASTE_YOUR_FORMSPREE_ENDPOINT_HERE";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mykolopd";
 
 // ─── Option sets ──────────────────────────────────────────────────────────────
 
