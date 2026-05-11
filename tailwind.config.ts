@@ -12,6 +12,15 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        "x-slider": {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(calc(-50% - 1.25rem))" },
+        },
+      },
+      animation: {
+        "x-slider": "x-slider 60s linear infinite",
+      },
     },
   },
   plugins: [],
