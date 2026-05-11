@@ -39,7 +39,7 @@ export default function Hero() {
         <div className="animate-fade-in-down flex items-center gap-3 mb-12">
           <div className="h-px w-8 bg-white/10" />
           <p className="text-[10px] font-mono tracking-[0.28em] uppercase text-[#777]">
-            &#47;&#47; Contractor Digital Infrastructure
+            Defense Industrial Base · Digital Modernization
           </p>
           <div className="h-px w-8 bg-white/10" />
         </div>
