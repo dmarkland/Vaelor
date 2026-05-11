@@ -64,10 +64,10 @@ export default function Footer() {
             © 2026 Vaelor. All rights reserved.
           </p>
           <a
-            href="mailto:support@vaelor.com"
+            href="mailto:support@vaelor.io"
             className="text-xs text-[#444] font-mono hover:text-[#888] transition-colors duration-200"
           >
-            support@vaelor.com
+            support@vaelor.io
           </a>
         </div>
 

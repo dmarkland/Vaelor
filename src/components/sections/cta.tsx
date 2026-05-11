@@ -58,7 +58,7 @@ export default function CTA() {
             className="mt-10 flex items-center gap-8"
           >
             <a
-              href="mailto:support@vaelor.com?subject=Discovery%20Call%20Request&body=Hello%2C%0A%0AI%27d%20like%20to%20schedule%20a%20discovery%20call%20to%20discuss%20our%20digital%20presence.%0A%0ACompany%3A%20%0ANAICS%20Code(s)%3A%20%0APrimary%20goal%3A%20"
+              href="mailto:support@vaelor.io?subject=Modernization%20Inquiry&body=Hello%20Vaelor%2C%0A%0AI%27m%20interested%20in%20discussing%20a%20potential%20modernization%20project%20for%20our%20company.%0A%0ACompany%3A%20%0AWebsite%3A%20%0A%0AThank%20you%2C"
               className="inline-flex items-center gap-2 text-white text-[11px] font-mono tracking-[0.16em] uppercase px-8 py-4 transition-all duration-300 cursor-pointer"
               style={{
                 background: "var(--accent-blue)",
