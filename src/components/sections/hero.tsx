@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import { WebGLShader } from "@/components/ui/web-gl-shader";
 import { AnimatedText } from "@/components/ui/animated-shiny-text";
 import { RadarBackground } from "@/components/ui/radar-bg";
 import { CoordinateHUD } from "@/components/ui/coordinate-hud";
 import { ScanLine } from "@/components/ui/scan-line";
+import { IntakeModal } from "@/components/ui/intake-modal";
 
 const INDUSTRY_TAGS = [
   "SAM.gov", "GSA Schedule", "IDIQ / GWAC", "CMMC", "Section 508", "8(a)", "SDVOSB",
@@ -70,24 +70,25 @@ export default function Hero() {
 
         {/* CTA */}
         <div className="mt-10 flex flex-col items-center gap-6 animate-fade-in-up animation-delay-800">
-          <Link
-            href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-3.5 text-[11px] font-mono tracking-[0.18em] uppercase text-white transition-all duration-300 cursor-pointer"
-            style={{
-              background: "var(--accent-blue)",
-              boxShadow: "0 0 0 1px rgba(42,114,181,0.3)",
-            }}
-            onMouseEnter={e => {
-              (e.currentTarget as HTMLAnchorElement).style.background = "var(--accent-blue-bright)";
-              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 0 30px var(--accent-blue-glow), 0 0 60px rgba(30,82,128,0.2)";
-            }}
-            onMouseLeave={e => {
-              (e.currentTarget as HTMLAnchorElement).style.background = "var(--accent-blue)";
-              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 0 0 1px rgba(42,114,181,0.3)";
-            }}
-          >
-            Request a Digital Assessment
-          </Link>
+          <IntakeModal>
+            <button
+              className="inline-flex items-center gap-2 px-8 py-3.5 text-[11px] font-mono tracking-[0.18em] uppercase text-white transition-all duration-300 cursor-pointer"
+              style={{
+                background: "var(--accent-blue)",
+                boxShadow: "0 0 0 1px rgba(42,114,181,0.3)",
+              }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLButtonElement).style.background = "var(--accent-blue-bright)";
+                (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 0 30px var(--accent-blue-glow), 0 0 60px rgba(30,82,128,0.2)";
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLButtonElement).style.background = "var(--accent-blue)";
+                (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 0 0 1px rgba(42,114,181,0.3)";
+              }}
+            >
+              Request a Digital Assessment
+            </button>
+          </IntakeModal>
 
           <p className="text-[10px] tracking-[0.15em] uppercase text-[#555] font-mono">
             Exclusively serving defense contractors &amp; DoD-aligned firms

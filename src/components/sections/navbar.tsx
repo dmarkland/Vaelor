@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { IntakeModal } from "@/components/ui/intake-modal";
 
 const NAV_LINKS = [
   { label: "Capabilities", href: "#capabilities" },
@@ -69,13 +70,14 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:block">
-          <a
-            href="mailto:support@vaelor.io?subject=Modernization%20Inquiry&body=Hello%20Vaelor%2C%0A%0AI%27m%20interested%20in%20discussing%20a%20potential%20modernization%20project%20for%20our%20company.%0A%0ACompany%3A%20%0AWebsite%3A%20%0A%0AThank%20you%2C"
-            className="text-[11px] tracking-[0.14em] uppercase font-mono px-5 py-2.5 text-white/80 hover:text-white transition-all duration-200 cursor-pointer"
-            style={{ border: "1px solid var(--accent-blue)", boxShadow: "0 0 12px var(--accent-blue-subtle)" }}
-          >
-            Book a Call
-          </a>
+          <IntakeModal>
+            <button
+              className="text-[11px] tracking-[0.14em] uppercase font-mono px-5 py-2.5 text-white/80 hover:text-white transition-all duration-200 cursor-pointer"
+              style={{ border: "1px solid var(--accent-blue)", boxShadow: "0 0 12px var(--accent-blue-subtle)" }}
+            >
+              Book a Call
+            </button>
+          </IntakeModal>
         </div>
 
         {/* Mobile hamburger */}
@@ -103,13 +105,14 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <a
-            href="mailto:support@vaelor.io?subject=Modernization%20Inquiry&body=Hello%20Vaelor%2C%0A%0AI%27m%20interested%20in%20discussing%20a%20potential%20modernization%20project%20for%20our%20company.%0A%0ACompany%3A%20%0AWebsite%3A%20%0A%0AThank%20you%2C"
-            onClick={() => setMenuOpen(false)}
-            className="mt-2 text-sm tracking-[0.14em] uppercase font-mono px-5 py-3 border border-white/20 text-white text-center hover:border-white/50 transition-all duration-200 cursor-pointer"
-          >
-            Book a Call
-          </a>
+          <IntakeModal>
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="mt-2 w-full text-sm tracking-[0.14em] uppercase font-mono px-5 py-3 border border-white/20 text-white text-center hover:border-white/50 transition-all duration-200 cursor-pointer"
+            >
+              Book a Call
+            </button>
+          </IntakeModal>
         </div>
       )}
     </header>
