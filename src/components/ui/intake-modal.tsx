@@ -243,7 +243,7 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
           additional_notes: form.additionalNotes || "None",
         }),
       });
-    } catch (_) {
+    } catch {
       // fail silently — Calendly still opens regardless
     }
     setSubmitted(true);
