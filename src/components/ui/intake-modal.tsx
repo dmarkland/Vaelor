@@ -90,9 +90,9 @@ const BLANK: FormData = {
 
 function Label({ text, optional }: { text: string; optional?: boolean }) {
   return (
-    <p className="text-[9px] font-mono text-[#444] tracking-[0.2em] uppercase mb-2 flex items-center gap-2">
+    <p className="text-[10px] font-mono text-[#888] tracking-[0.18em] uppercase mb-3 flex items-center gap-2">
       {text}
-      {optional && <span className="text-[#2a2a2a] normal-case tracking-normal font-sans">— optional</span>}
+      {optional && <span className="text-[#444] normal-case tracking-normal font-sans text-[10px]">— optional</span>}
     </p>
   );
 }
@@ -108,7 +108,7 @@ function TextInput({ label, value, onChange, placeholder, optional }: {
         value={value}
         onChange={e => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full bg-transparent border-b border-[#1c1c1c] text-sm font-light text-[#e8e8e8] py-2 focus:outline-none focus:border-[#1e5280] placeholder:text-[#282828] transition-colors duration-300"
+        className="w-full bg-[#080d13] border border-[#1e2530] text-sm font-light text-[#e8e8e8] px-3 py-2.5 focus:outline-none focus:border-[#2a72b5] placeholder:text-[#3d4a58] transition-colors duration-200"
       />
     </div>
   );
@@ -125,7 +125,7 @@ function TextArea({ label, value, onChange, placeholder, optional }: {
         onChange={e => onChange(e.target.value)}
         placeholder={placeholder}
         rows={3}
-        className="w-full bg-transparent border border-[#1a1a1a] text-sm font-light text-[#e8e8e8] p-3 focus:outline-none focus:border-[#1e5280] placeholder:text-[#282828] transition-colors duration-300 resize-none"
+        className="w-full bg-[#080d13] border border-[#1e2530] text-sm font-light text-[#e8e8e8] px-3 py-2.5 focus:outline-none focus:border-[#2a72b5] placeholder:text-[#3d4a58] transition-colors duration-200 resize-none"
       />
     </div>
   );
@@ -136,13 +136,13 @@ function Pill({ label, active, onClick }: { label: string; active: boolean; onCl
     <button
       type="button"
       onClick={onClick}
-      className={`px-3 py-1.5 text-[10px] font-mono tracking-[0.08em] border transition-all duration-200 cursor-pointer
+      className={`px-3.5 py-2 text-[11px] font-mono tracking-[0.06em] border transition-all duration-200 cursor-pointer
         ${active
-          ? "border-[#1e5280] bg-[#060f18] text-white"
-          : "border-[#181818] text-[#555] hover:border-[#2a2a2a] hover:text-[#888]"
+          ? "border-[#2a72b5] bg-[#071830] text-white"
+          : "border-[#1e2530] text-[#888] hover:border-[#2a3848] hover:text-[#ccc] hover:bg-[#080d13]"
         }`}
     >
-      {active && <span className="text-[#2a72b5] mr-1 text-[8px]">✓ </span>}
+      {active && <span className="text-[#2a72b5] mr-1.5 text-[9px]">✓</span>}
       {label}
     </button>
   );
@@ -278,10 +278,10 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
                 transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
               >
                 <div
-                  className="relative bg-[#020304] border border-[#111] flex flex-col"
+                  className="relative bg-[#030609] border border-[#1a2030] flex flex-col"
                   style={{
                     maxHeight: "92vh",
-                    boxShadow: "0 0 0 1px rgba(30,82,128,0.10), 0 48px 120px rgba(0,0,0,0.95)",
+                    boxShadow: "0 0 0 1px rgba(42,114,181,0.08), 0 48px 120px rgba(0,0,0,0.95)",
                   }}
                 >
                   {/* Corner brackets */}
@@ -291,46 +291,46 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
                   <div className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-[#1e5280]/25 pointer-events-none" />
 
                   {/* Header */}
-                  <div className="flex items-center justify-between px-8 pt-7 pb-5 border-b border-[#0c0c0c] shrink-0">
+                  <div className="flex items-center justify-between px-8 pt-7 pb-5 border-b border-[#111820] shrink-0">
                     <div>
-                      <span className="text-[9px] font-mono tracking-[0.24em] text-[#1e5280] uppercase">
+                      <span className="text-[10px] font-mono tracking-[0.22em] text-[#2a72b5] uppercase">
                         Modernization Strategy Call
                       </span>
                       <div className="flex items-center gap-5 mt-2">
                         <div className="flex items-center gap-1.5">
-                          <Clock className="h-3 w-3 text-[#2a2a2a]" />
-                          <span className="text-[10px] font-mono text-[#3a3a3a]">30 minutes</span>
+                          <Clock className="h-3 w-3 text-[#555]" />
+                          <span className="text-[10px] font-mono text-[#666]">30 minutes</span>
                         </div>
                         <div className="flex items-center gap-1.5">
-                          <Video className="h-3 w-3 text-[#2a2a2a]" />
-                          <span className="text-[10px] font-mono text-[#3a3a3a]">Zoom</span>
+                          <Video className="h-3 w-3 text-[#555]" />
+                          <span className="text-[10px] font-mono text-[#666]">Zoom</span>
                         </div>
                       </div>
                     </div>
-                    <Dialog.Close className="text-[#2a2a2a] hover:text-white transition-colors duration-200 cursor-pointer">
+                    <Dialog.Close className="text-[#555] hover:text-white transition-colors duration-200 cursor-pointer p-1">
                       <X className="h-4 w-4" />
                     </Dialog.Close>
                   </div>
 
                   {/* Step progress bar */}
                   {!submitted && (
-                    <div className="px-8 py-4 border-b border-[#090909] shrink-0">
+                    <div className="px-8 py-4 border-b border-[#111820] shrink-0">
                       <div className="flex items-center">
                         {STEPS.map((s, i) => (
                           <React.Fragment key={s.id}>
                             <div className="flex items-center gap-1.5 shrink-0">
                               <span className={`text-[9px] font-mono tracking-[0.16em] transition-colors duration-300
-                                ${i === step ? "text-white" : i < step ? "text-[#1e5280]" : "text-[#1e1e1e]"}`}>
+                                ${i === step ? "text-white" : i < step ? "text-[#2a72b5]" : "text-[#333]"}`}>
                                 {s.id}
                               </span>
-                              <span className={`text-[9px] font-mono tracking-[0.08em] transition-colors duration-300
-                                ${i === step ? "text-[#777]" : i < step ? "text-[#333]" : "text-[#1a1a1a]"}`}>
+                              <span className={`text-[9px] font-mono tracking-[0.08em] transition-colors duration-300 hidden sm:inline
+                                ${i === step ? "text-[#888]" : i < step ? "text-[#444]" : "text-[#2a2a2a]"}`}>
                                 {s.label}
                               </span>
                             </div>
                             {i < STEPS.length - 1 && (
-                              <div className={`flex-1 h-px mx-3 transition-colors duration-500
-                                ${i < step ? "bg-[#1e5280]/35" : "bg-[#101010]"}`} />
+                              <div className={`flex-1 h-px mx-2 sm:mx-3 transition-colors duration-500
+                                ${i < step ? "bg-[#2a72b5]/40" : "bg-[#1e2530]"}`} />
                             )}
                           </React.Fragment>
                         ))}
@@ -339,7 +339,7 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
                   )}
 
                   {/* Body */}
-                  <div className="overflow-y-auto flex-1 px-8 py-7" style={{ minHeight: 260 }}>
+                  <div className="overflow-y-auto flex-1 px-8 py-8" style={{ minHeight: 280 }}>
                     <AnimatePresence mode="wait" custom={dir}>
                       {submitted ? (
                         <motion.div
@@ -358,14 +358,14 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
                           <p className="text-lg font-extralight text-[#e8e8e8] tracking-[-0.01em] mb-3">
                             Your intake is on its way.
                           </p>
-                          <p className="text-sm font-light text-[#555] leading-relaxed max-w-xs">
+                          <p className="text-sm font-light text-[#777] leading-relaxed max-w-xs">
                             Your Calendly booking page has opened in a new tab. Select a time that works for you.
                           </p>
                           <a
                             href={CALENDLY_URL}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-7 flex items-center gap-2 text-[10px] font-mono tracking-[0.16em] uppercase text-[#444] hover:text-white transition-colors duration-200"
+                            className="mt-7 flex items-center gap-2 text-[10px] font-mono tracking-[0.16em] uppercase text-[#666] hover:text-white transition-colors duration-200"
                           >
                             Open Calendly <ArrowRight className="h-3 w-3" />
                           </a>
@@ -386,7 +386,7 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
                             <>
                               <div>
                                 <p className="text-base font-light text-[#e8e8e8] tracking-[-0.01em] mb-1">Company Information</p>
-                                <p className="text-xs font-light text-[#444] leading-relaxed">Let us know who we&apos;re speaking with before the call.</p>
+                                <p className="text-xs font-light text-[#666] leading-relaxed">Let us know who we&apos;re speaking with before the call.</p>
                               </div>
                               <div className="grid grid-cols-2 gap-x-6 gap-y-5">
                                 <div className="col-span-2">
@@ -410,7 +410,7 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
                             <>
                               <div>
                                 <p className="text-base font-light text-[#e8e8e8] tracking-[-0.01em] mb-1">Current Challenges</p>
-                                <p className="text-xs font-light text-[#444] leading-relaxed">Understanding where the gaps are helps us prepare a more focused conversation.</p>
+                                <p className="text-xs font-light text-[#666] leading-relaxed">Understanding where the gaps are helps us prepare a more focused conversation.</p>
                               </div>
                               <div>
                                 <Label text="What prompted you to explore modernization?" />
@@ -431,7 +431,7 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
                             <>
                               <div>
                                 <p className="text-base font-light text-[#e8e8e8] tracking-[-0.01em] mb-1">Business Priorities</p>
-                                <p className="text-xs font-light text-[#444] leading-relaxed">This shapes how we frame the engagement around what matters most to your firm.</p>
+                                <p className="text-xs font-light text-[#666] leading-relaxed">This shapes how we frame the engagement around what matters most to your firm.</p>
                               </div>
                               <div>
                                 <Label text="Primary goals of this project" />
@@ -449,7 +449,7 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
                             <>
                               <div>
                                 <p className="text-base font-light text-[#e8e8e8] tracking-[-0.01em] mb-1">Engagement Scope</p>
-                                <p className="text-xs font-light text-[#444] leading-relaxed">Select all areas you&apos;re looking to modernize. We&apos;ll discuss specifics on the call.</p>
+                                <p className="text-xs font-light text-[#666] leading-relaxed">Select all areas you&apos;re looking to modernize. We&apos;ll discuss specifics on the call.</p>
                               </div>
                               <div>
                                 <Label text="Areas of focus" />
@@ -463,7 +463,7 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
                             <>
                               <div>
                                 <p className="text-base font-light text-[#e8e8e8] tracking-[-0.01em] mb-1">Strategic Direction</p>
-                                <p className="text-xs font-light text-[#444] leading-relaxed">These answers directly shape our approach before we get on the call.</p>
+                                <p className="text-xs font-light text-[#666] leading-relaxed">These answers directly shape our approach before we get on the call.</p>
                               </div>
                               <TextArea
                                 label="How do you want your organization to be perceived online?"
@@ -494,26 +494,26 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
 
                   {/* Footer */}
                   {!submitted && (
-                    <div className="px-8 py-5 border-t border-[#090909] flex items-center justify-between shrink-0">
+                    <div className="px-8 py-5 border-t border-[#111820] flex items-center justify-between shrink-0">
                       {/* Back */}
                       <button
                         type="button"
                         onClick={back}
                         disabled={step === 0}
                         className={`flex items-center gap-2 text-[10px] font-mono tracking-[0.14em] uppercase transition-colors duration-200
-                          ${step === 0 ? "text-[#1c1c1c] pointer-events-none" : "text-[#444] hover:text-white cursor-pointer"}`}
+                          ${step === 0 ? "text-[#222] pointer-events-none" : "text-[#666] hover:text-white cursor-pointer"}`}
                       >
                         <ArrowLeft className="h-3 w-3" />
                         Back
                       </button>
 
                       {/* Progress dots */}
-                      <div className="flex items-center gap-1.5">
+                      <div className="flex items-center gap-2">
                         {STEPS.map((_, i) => (
                           <div
                             key={i}
                             className={`h-px transition-all duration-300
-                              ${i === step ? "w-6 bg-[#1e5280]" : i < step ? "w-4 bg-[#1e5280]/35" : "w-4 bg-[#181818]"}`}
+                              ${i === step ? "w-6 bg-[#2a72b5]" : i < step ? "w-4 bg-[#2a72b5]/40" : "w-4 bg-[#1e2530]"}`}
                           />
                         ))}
                       </div>
@@ -524,8 +524,8 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
                           type="button"
                           onClick={next}
                           disabled={!canProceed}
-                          className={`flex items-center gap-2 text-[10px] font-mono tracking-[0.14em] uppercase transition-colors duration-200
-                            ${canProceed ? "text-white hover:text-[#2a72b5] cursor-pointer" : "text-[#252525] pointer-events-none"}`}
+                          className={`flex items-center gap-2 text-[10px] font-mono tracking-[0.14em] uppercase transition-all duration-200
+                            ${canProceed ? "text-white hover:text-[#2a72b5] cursor-pointer" : "text-[#2a2a2a] pointer-events-none"}`}
                         >
                           Continue
                           <ArrowRight className="h-3 w-3" />
@@ -538,7 +538,7 @@ export function IntakeModal({ children }: { children: React.ReactNode }) {
                           className={`flex items-center gap-2 text-[10px] font-mono tracking-[0.14em] uppercase px-5 py-2.5 transition-all duration-300
                             ${canProceed && !submitting
                               ? "bg-[#1e5280] text-white cursor-pointer hover:bg-[#2a72b5]"
-                              : "bg-[#0a0a0a] text-[#252525] pointer-events-none"}`}
+                              : "bg-[#0d1420] text-[#333] pointer-events-none"}`}
                         >
                           {submitting ? "Submitting..." : "Book My Call"}
                           {!submitting && <ArrowRight className="h-3 w-3" />}
