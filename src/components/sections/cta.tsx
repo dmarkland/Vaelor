@@ -39,7 +39,7 @@ export default function CTA() {
             transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="mt-6 text-4xl md:text-5xl lg:text-6xl font-extralight text-[#e8e8e8] tracking-[-0.03em] leading-tight"
           >
-            The Digital Presence Gap Is Costing Contractors Contracts They Should Be Winning.
+            Your Capabilities Are Proven. Your Website Should Be Too.
           </motion.h2>
 
           <motion.p
