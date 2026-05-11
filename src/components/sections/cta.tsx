@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { FallingPattern } from "@/components/ui/falling-pattern";
 import { ScanLine } from "@/components/ui/scan-line";
+import { BookingModal } from "@/components/ui/booking-modal";
 
 export default function CTA() {
   const ref = useRef(null);
@@ -57,25 +58,26 @@ export default function CTA() {
             transition={{ duration: 1.0, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="mt-10 flex items-center gap-8"
           >
-            <a
-              href="mailto:support@vaelor.io?subject=Modernization%20Inquiry&body=Hello%20Vaelor%2C%0A%0AI%27m%20interested%20in%20discussing%20a%20potential%20modernization%20project%20for%20our%20company.%0A%0ACompany%3A%20%0AWebsite%3A%20%0A%0AThank%20you%2C"
-              className="inline-flex items-center gap-2 text-white text-[11px] font-mono tracking-[0.16em] uppercase px-8 py-4 transition-all duration-300 cursor-pointer"
-              style={{
-                background: "var(--accent-blue)",
-                boxShadow: "0 0 0 1px rgba(42,114,181,0.3)",
-              }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLAnchorElement).style.background = "var(--accent-blue-bright)";
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 0 30px var(--accent-blue-glow), 0 0 60px rgba(30,82,128,0.2)";
-              }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLAnchorElement).style.background = "var(--accent-blue)";
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 0 0 1px rgba(42,114,181,0.3)";
-              }}
-            >
-              Schedule a Discovery Call
-              <ArrowRight className="h-4 w-4" />
-            </a>
+            <BookingModal>
+              <button
+                className="inline-flex items-center gap-2 text-white text-[11px] font-mono tracking-[0.16em] uppercase px-8 py-4 transition-all duration-300 cursor-pointer"
+                style={{
+                  background: "var(--accent-blue)",
+                  boxShadow: "0 0 0 1px rgba(42,114,181,0.3)",
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLButtonElement).style.background = "var(--accent-blue-bright)";
+                  (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 0 30px var(--accent-blue-glow), 0 0 60px rgba(30,82,128,0.2)";
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLButtonElement).style.background = "var(--accent-blue)";
+                  (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 0 0 1px rgba(42,114,181,0.3)";
+                }}
+              >
+                Schedule a Discovery Call
+                <ArrowRight className="h-4 w-4" />
+              </button>
+            </BookingModal>
             <span className="text-xs text-[#444] font-mono tracking-wider hidden sm:block">
               No commitment. 30 minutes.
             </span>
